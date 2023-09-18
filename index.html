@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Template 1</title>
+  <title> Vision Analitics - Martoli </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,8 +38,8 @@
 
         <div class="d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
-            <span class="d-none d-lg-block">Template 3</span>
+            <img src="assets/img/Logotip.png" alt="">
+            <span class="d-none d-lg-block">Martoli</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -183,50 +183,61 @@
 
                         <script>
                             document.addEventListener("DOMContentLoaded", () => {
-                            echarts.init(document.querySelector("#trafficChart")).setOption({
-                                tooltip: {
-                                trigger: 'item'
-                                },
-                                legend: {
-                                top: '5%',
-                                left: 'center'
-                                },
-                                series: [{
-                                name: 'Fluxo Competência (%)',
-                                type: 'pie',
-                                radius: ['0%', '60%'],
-                                avoidLabelOverlap: false,
-                                label: {
-                                    show: true,
-                                    position: 'outside',
-                                    formatter: '{d}%'
-                                },
-                                emphasis: {
-                                    label: {
-                                    show: true,
-                                    fontSize: '18',
-                                    fontWeight: 'bold'
-                                    }
-                                },
-                                labelLine: {
-                                    show: false
-                                },
-                                data: [{
-                                    value: 40.16,
-                                    name: 'Danos Parciais'
-                                    },
-                                    {
-                                    value: 74.08,
-                                    name: 'Indenização'
-                                    },
-                                    {
-                                    value: 3.96,
-                                    name: 'Produtos Adicionais'
-                                    }
-                                ]
-                                }]
-                            });
-                            });
+    echarts.init(document.querySelector("#trafficChart")).setOption({
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            top: '5%',
+            left: 'center'
+        },
+        series: [{
+            name: 'Fluxo Competência (%)',
+            type: 'pie',
+            radius: ['0%', '60%'],
+            avoidLabelOverlap: false,
+            label: {
+                show: true,
+                position: 'outside',
+                formatter: '{d}%'
+            },
+            emphasis: {
+                label: {
+                    show: true,
+                    fontSize: '18',
+                    fontWeight: 'bold'
+                }
+            },
+            labelLine: {
+                show: false
+            },
+            data: [
+                {
+                    value: 40.16,
+                    name: 'Danos Parciais',
+                    itemStyle: {
+                        color: '#0E2833' // Cor da fatia 'Danos Parciais'
+                    }
+                },
+                {
+                    value: 74.08,
+                    name: 'Indenização',
+                    itemStyle: {
+                        color: '#1F5B73' // Cor da fatia 'Indenização'
+                    }
+                },
+                {
+                    value: 3.96,
+                    name: 'Produtos Adicionais',
+                    itemStyle: {
+                        color: '#D93240' // Cor da fatia 'Produtos Adicionais'
+                    }
+                }
+            ]
+        }]
+    });
+});
+
                         </script>
                         </div>
                         </div>
@@ -287,15 +298,24 @@
                                     },
                                     data: [{
                                         value: 47.55,
-                                        name: 'Danos Parciais'
+                                        name: 'Danos Parciais',
+                                        itemStyle: {
+                                          color: '#0E2833'
+                                        }
                                         },
                                         {
                                         value: 57.11,
-                                        name: 'Indenização'
+                                        name: 'Indenização',
+                                        itemStyle: {
+                                          color: '#1F5B73'
+                                        }
                                         },
                                         {
                                         value: 4.41,
-                                        name: 'Produtos Adicionais'
+                                        name: 'Produtos Adicionais',
+                                        itemStyle: {
+                                          color: '#D93240'
+                                        }
                                         }
                                     ]
                                     }]
@@ -320,53 +340,61 @@
       
                     <script>
                       document.addEventListener("DOMContentLoaded", () => {
-                        echarts.init(document.querySelector("#verticalBarChart")).setOption({
-                          title: {
-                            text: ''
-                          },
-                          tooltip: {
-                            trigger: 'axis',
-                            axisPointer: {
-                              type: 'shadow'
-                            }
-                          },
-                          legend: {},
-                          grid: {
-                            left: '3%',
-                            right: '4%',
-                            bottom: '3%',
-                            containLabel: true
-                          },
-                          xAxis: {
-                            type: 'value',
-                            boundaryGap: [0, 0.01]                            
-                          },
-                          yAxis: {
-                            type: 'category',
-                            inverse: true,
-                            data: ['Roubo','Oficinas','Perda total', 'Furto','Incêndio','Peças','Produtos Adicionais','Acordo','Carro Reserva', 'Sindicância', 'Doc. Salvos', 'Pag. Avulsos', 'Reembolso']
-                          },
-                          series: [{
-                              name: 'Competência (%)',
-                              type: 'bar',
-                              data: [36.3, 32.5, 20.8, 9.1, 6.7, 4.5, 4.0, 1.7, 1.5, 1.2, 0.0, 0.0, 0.0],
-                              label:{
-                                show:true,
-                                position: 'right'
-                              }
-                            },
-                            {
-                              name: 'Caixa (%)',
-                              type: 'bar',
-                              data: [19.7, 37.7, 25.2, 6.5, 4.6, 5.3, 4.4, 1.9, 2.6, 1.2, 0.0, 0.0, 0.0],
-                              label:{
-                                show:true,
-                                position: 'right'
-                              }
-                            }
-                          ]
-                        });
-                      });
+    echarts.init(document.querySelector("#verticalBarChart")).setOption({
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        legend: {},
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value',
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            inverse: true,
+            data: ['Roubo', 'Oficinas', 'Perda total', 'Furto', 'Incêndio', 'Peças', 'Produtos Adicionais', 'Acordo', 'Carro Reserva', 'Sindicância', 'Doc. Salvos', 'Pag. Avulsos', 'Reembolso']
+        },
+        series: [
+            {
+                name: 'Competência (%)',
+                type: 'bar',
+                data: [36.3, 32.5, 20.8, 9.1, 6.7, 4.5, 4.0, 1.7, 1.5, 1.2, 0.0, 0.0, 0.0],
+                label: {
+                    show: true,
+                    position: 'right'
+                },
+                itemStyle: {
+                    color: '#0E2833' 
+                }
+            },
+            {
+                name: 'Caixa (%)',
+                type: 'bar',
+                data: [19.7, 37.7, 25.2, 6.5, 4.6, 5.3, 4.4, 1.9, 2.6, 1.2, 0.0, 0.0, 0.0],
+                label: {
+                    show: true,
+                    position: 'right'
+                },
+                itemStyle: {
+                    color: '#D93240' 
+                }
+            }
+        ]
+    });
+});
+
                     </script>
                     <!-- End Vertical Bar Chart -->
       
