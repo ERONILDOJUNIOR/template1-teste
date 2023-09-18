@@ -58,64 +58,11 @@
             <a class="nav-link nav-icon search-bar-toggle " href="#">
                 <i class="bi bi-search"></i>
             </a>
-            </li><!-- End Search Icon-->
             
-
-            <li class="nav-item dropdown pe-3">
-
-            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                <span class="d-none d-md-block dropdown-toggle ps-2">Jonatas Castro</span>
-            </a><!-- End Profile Iamge Icon -->
-
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                <li class="dropdown-header">
-                <h6>Jonatas Castro</h6>
-                <span> Dono do Projeto </span>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                    <i class="bi bi-person"></i>
-                    <span>Meu Perfil</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                    <i class="bi bi-gear"></i>
-                    <span>Configurações</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                    <i class="bi bi-question-circle"></i>
-                    <span>Ajuda</span>
-                </a>
-                </li>
-                <li>
-                <hr class="dropdown-divider">
-                </li>
-
-                <li>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Sair</span>
-                </a>
-                </li>
-
-            </ul><!-- End Profile Dropdown Items -->
-            </li><!-- End Profile Nav -->
+            </li><!-- End Search Icon-->
+            <button class="btn" style="background-color: #0E2833; color: #f1f1f1; align-items: center;" id="fullscreen-button">Entrar em Tela Cheia</button>
+                        
+            
 
         </ul>
         </nav><!-- End Icons Navigation -->
@@ -131,10 +78,6 @@
             <a class="nav-link " href="index.html">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
-            </a>
-            <a class="nav-link " href="dashboard-tv.html">
-                <i class="bi bi-grid"></i>
-                <span>Dashboard-TV</span>
             </a>
         </li><!-- End Dashboard Nav -->
 
@@ -157,189 +100,20 @@
         </div><!-- End Page Title -->
 
         <section class="section dashboard">
-            <div class="row">        
+
+            <div class="row">
+
                 <div class="col-lg-6">
 
-                    <div class="card">
-                        <div class="filter">
-                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <li class="dropdown-header text-start">
-                            <h6>Período</h6>
-                            </li>
-
-                            <li><a class="dropdown-item" href="#">Agosto / 2023</a></li>
-                            <li><a class="dropdown-item" href="#">Julho / 2023</a></li>
-                            <li><a class="dropdown-item" href="#">Junho / 2023</a></li>
-                            <li><a class="dropdown-item" href="#">Maio / 2023</a></li>
-                            <li><a class="dropdown-item" href="#">Abril / 2023</a></li>
-                        </ul>
-                        </div>
-
-                        <div class="card-body">
-                        <h5 class="card-title">Fluxo Competência<span>| Agosto/2023</span></h5>
-
-                        <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", () => {
-    echarts.init(document.querySelector("#trafficChart")).setOption({
-        tooltip: {
-            trigger: 'item'
-        },
-        legend: {
-            top: '5%',
-            left: 'center'
-        },
-        series: [{
-            name: 'Fluxo Competência (%)',
-            type: 'pie',
-            radius: ['0%', '60%'],
-            avoidLabelOverlap: false,
-            label: {
-                show: true,
-                position: 'outside',
-                formatter: '{d}%'
-            },
-            emphasis: {
-                label: {
-                    show: true,
-                    fontSize: '18',
-                    fontWeight: 'bold'
-                }
-            },
-            labelLine: {
-                show: false
-            },
-            data: [
-                {
-                    value: 40.16,
-                    name: 'Danos Parciais',
-                    itemStyle: {
-                        color: '#0E2833' // Cor da fatia 'Danos Parciais'
-                    }
-                },
-                {
-                    value: 74.08,
-                    name: 'Indenização',
-                    itemStyle: {
-                        color: '#1F5B73' // Cor da fatia 'Indenização'
-                    }
-                },
-                {
-                    value: 3.96,
-                    name: 'Produtos Adicionais',
-                    itemStyle: {
-                        color: '#D93240' // Cor da fatia 'Produtos Adicionais'
-                    }
-                }
-            ]
-        }]
-    });
-});
-
-                        </script>
-                        </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="card">
-                            <div class="filter">
-                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li class="dropdown-header text-start">
-                                <h6>Período</h6>
-                                </li>
-            
-                                <li><a class="dropdown-item" href="#">Agosto / 2023</a></li>
-                                <li><a class="dropdown-item" href="#">Julho / 2023</a></li>
-                                <li><a class="dropdown-item" href="#">Junho / 2023</a></li>
-                                <li><a class="dropdown-item" href="#">Maio / 2023</a></li>
-                                <li><a class="dropdown-item" href="#">Abril / 2023</a></li>
-                            </ul>
-                            </div>
-            
-                            <div class="card-body pb-0">
-                            <h5 class="card-title">Fluxo Caixa<span>| Agosto/2023</span></h5>
-            
-                            <div id="testeChart" style="min-height: 400px;" class="echart"></div>
-            
+                    <div class="card" style="min-height: 40%;">
+                      <div class="card-body" >
+                            <h5 class="card-title">Comparação de Fluxos (%/Tipo)</h5>
+          
+                       
+                            <div id="verticalBarChart" style="min-height: 600px;" class="echart"></div>
+          
                             <script>
-                                document.addEventListener("DOMContentLoaded", () => {
-                                echarts.init(document.querySelector("#testeChart")).setOption({
-                                    tooltip: {
-                                    trigger: 'item'
-                                    },
-                                    legend: {
-                                    top: '5%',
-                                    left: 'center'
-                                    },
-                                    series: [{
-                                    name: 'Fluxo Caixa (%)',
-                                    type: 'pie',
-                                    radius: ['0%', '60%'],
-                                    avoidLabelOverlap: false,
-                                    label: {
-                                        show: true,
-                                        position: 'outside',
-                                        formatter: '{d}%'
-                                    },
-                                    emphasis: {
-                                        label: {
-                                        show: true,
-                                        fontSize: '18',
-                                        fontWeight: 'bold'
-                                        }
-                                    },
-                                    labelLine: {
-                                        show: false
-                                    },
-                                    data: [{
-                                        value: 47.55,
-                                        name: 'Danos Parciais',
-                                        itemStyle: {
-                                          color: '#0E2833'
-                                        }
-                                        },
-                                        {
-                                        value: 57.11,
-                                        name: 'Indenização',
-                                        itemStyle: {
-                                          color: '#1F5B73'
-                                        }
-                                        },
-                                        {
-                                        value: 4.41,
-                                        name: 'Produtos Adicionais',
-                                        itemStyle: {
-                                          color: '#D93240'
-                                        }
-                                        }
-                                    ]
-                                    }]
-                                });
-                                });
-                            </script>
-            
-                            </div>
-                        </div>                
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-12">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Comparação de Fluxos (%/Tipo)</h5>
-      
-                    <!-- Vertical Bar Chart -->
-                    <div id="verticalBarChart" style="min-height: 800px;" class="echart"></div>
-      
-                    <script>
-                      document.addEventListener("DOMContentLoaded", () => {
+                            document.addEventListener("DOMContentLoaded", () => {
     echarts.init(document.querySelector("#verticalBarChart")).setOption({
         title: {
             text: ''
@@ -395,12 +169,199 @@
     });
 });
 
-                    </script>
-                    <!-- End Vertical Bar Chart -->
-      
-                  </div>
+                            </script>
+                        
+          
+                        </div>
+    
+                    </div>
+    
                 </div>
-              </div>
+    
+                <div class="col-lg-6" style="max-height: 80%;">
+    
+    
+                        <div class="card">
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                    <h6>Período</h6>
+                                    </li>
+    
+                                    <li><a class="dropdown-item" href="#">Agosto / 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Julho / 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Junho / 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Maio / 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Abril / 2023</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="card-body">
+                                <h5 class="card-title">Fluxo Competência<span>| Agosto/2023</span></h5>
+    
+                                <div id="trafficChart" style="height: 250px;" class="echart"></div>
+    
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", () => {
+                                    echarts.init(document.querySelector("#trafficChart")).setOption({
+                                        tooltip: {
+                                        trigger: 'item'
+                                        },
+                                        legend: {
+                                            top: '5%', // Define a posição vertical da legenda
+                                            left: '5%', // Define a posição horizontal da legenda
+                                            orient: 'vertical', // Define a orientação da legenda
+                                            data: ['Danos Parciais', 'Indenização', 'Produtos Adicionais'], // Define os nomes da legenda
+                                            textStyle: {
+                                                color: 'black' // Define a cor do texto da legenda
+                                            }
+                                        },
+                                        series: [{
+                                        name: 'Fluxo Competência (%)',
+                                        type: 'pie',
+                                        radius: ['0%', '60%'],
+                                        avoidLabelOverlap: false,
+                                        label: {
+                                            show: true,
+                                            position: 'outside',
+                                            formatter: '{d}%'
+                                        },
+                                        emphasis: {
+                                            label: {
+                                            show: true,
+                                            fontSize: '18',
+                                            fontWeight: 'bold'
+                                            }
+                                        },
+                                        labelLine: {
+                                            show: false
+                                        },
+                                        data: [{
+                                            value: 40.16,
+                                            name: 'Danos Parciais',
+                                            itemStyle: {
+                                            color: '#0E2833'
+                                            }                                            
+                                            },
+                                            {
+                                            value: 74.08,
+                                            name: 'Indenização',
+                                            itemStyle: {
+                                            color: '#1F5B73'
+                                            }
+                                            },
+                                            {
+                                            value: 3.96,
+                                            name: 'Produtos Adicionais',
+                                            itemStyle: {
+                                            color: '#D93240'
+                                            }
+                                            }
+                                        ]
+                                        }]
+                                    });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                   
+    
+                    
+    
+                        <div class="card">
+                            <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                <h6>Período</h6>
+                                </li>
+            
+                                <li><a class="dropdown-item" href="#">Agosto / 2023</a></li>
+                                <li><a class="dropdown-item" href="#">Julho / 2023</a></li>
+                                <li><a class="dropdown-item" href="#">Junho / 2023</a></li>
+                                <li><a class="dropdown-item" href="#">Maio / 2023</a></li>
+                                <li><a class="dropdown-item" href="#">Abril / 2023</a></li>
+                            </ul>
+                            </div>
+            
+                            <div class="card-body pb-0">
+                            <h5 class="card-title">Fluxo Caixa<span>| Agosto/2023</span></h5>
+            
+                            <div id="testeChart" style="height: 250px;" class="echart"></div>
+            
+                            <script>
+                                document.addEventListener("DOMContentLoaded", () => {
+                                echarts.init(document.querySelector("#testeChart")).setOption({
+                                    tooltip: {
+                                    trigger: 'item'
+                                    },
+                                    legend: {
+                                        top: '5%', // Define a posição vertical da legenda
+                                        left: '5%', // Define a posição horizontal da legenda
+                                        orient: 'vertical', // Define a orientação da legenda
+                                        data: ['Danos Parciais', 'Indenização', 'Produtos Adicionais'], // Define os nomes da legenda
+                                        textStyle: {
+                                            color: 'black' // Define a cor do texto da legenda
+                                        }
+                                    },
+                                    series: [{
+                                    name: 'Fluxo Caixa (%)',
+                                    type: 'pie',
+                                    radius: ['0%', '60%'],
+                                    avoidLabelOverlap: false,
+                                    label: {
+                                        show: true,
+                                        position: 'outside',
+                                        formatter: '{d}%'
+                                    },
+                                    emphasis: {
+                                        label: {
+                                        show: true,
+                                        fontSize: '18',
+                                        fontWeight: 'bold'
+                                        }
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    data: [{
+                                        value: 47.55,
+                                        name: 'Danos Parciais',
+                                        itemStyle: {
+                                            color: '#0E2833'
+                                            } 
+                                        },
+                                        {
+                                        value: 57.11,
+                                        name: 'Indenização',
+                                        itemStyle: {
+                                            color: '#1F5B73'
+                                            } 
+                                        },
+                                        {
+                                        value: 4.41,
+                                        name: 'Produtos Adicionais',
+                                        itemStyle: {
+                                            color: '#D93240'
+                                            } 
+                                        }
+                                    ]
+                                    }]
+                                });
+                                });
+                            </script>
+            
+                            </div>
+                    
+    
+    
+    
+                </div> 
+
+
+            </div>
+
 
         </section>
 
@@ -419,6 +380,36 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fullscreenButton = document.getElementById("fullscreen-button");
+
+        // Função para alternar tela cheia
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error(`Erro ao tentar entrar em tela cheia: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+
+        // Evento de clique no botão
+        fullscreenButton.addEventListener("click", toggleFullscreen);
+
+        // Evento de mudança de tela cheia
+        document.addEventListener("fullscreenchange", function() {
+            if (document.fullscreenElement) {
+                fullscreenButton.textContent = "Sair de Tela Cheia";
+            } else {
+                fullscreenButton.textContent = "Entrar em Tela Cheia";
+            }
+        });
+    });
+</script>
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/chart.js/chart.umd.js"></script>
