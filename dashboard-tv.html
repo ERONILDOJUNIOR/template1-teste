@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - Template 1</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center" style="position: absolute;">
+
+        
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+
+    </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="index.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+            <a class="nav-link " href="dashboard-tv.html">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard-TV</span>
+            </a>
+        </li><!-- End Dashboard Nav -->    
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Dashboard</h1>
+            <nav>
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section dashboard">
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="card" style="min-height: 40%;">
+                      <div class="card-body" >
+                            <h5 class="card-title">Comparação de Fluxos (%/Tipo)</h5>
+          
+                       
+                            <div id="verticalBarChart" style="min-height: 600px;" class="echart"></div>
+          
+                            <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                echarts.init(document.querySelector("#verticalBarChart")).setOption({
+                                title: {
+                                    text: ''
+                                },
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {
+                                    type: 'shadow'
+                                    }
+                                },
+                                legend: {},
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                xAxis: {
+                                    type: 'value',
+                                    boundaryGap: [0, 0.01]                            
+                                },
+                                yAxis: {
+                                    type: 'category',
+                                    inverse: true,
+                                    data: ['Roubo','Oficinas','Perda total', 'Furto','Incêndio','Peças','Produtos Adicionais','Acordo','Carro Reserva', 'Sindicância', 'Doc. Salvos', 'Pag. Avulsos', 'Reembolso']
+                                },
+                                series: [{
+                                    name: 'Competência (%)',
+                                    type: 'bar',
+                                    data: [36.3, 32.5, 20.8, 9.1, 6.7, 4.5, 4.0, 1.7, 1.5, 1.2, 0.0, 0.0, 0.0],
+                                    label:{
+                                        show:true,
+                                        position: 'right'
+                                    }
+                                    },
+                                    {
+                                    name: 'Caixa (%)',
+                                    type: 'bar',
+                                    data: [19.7, 37.7, 25.2, 6.5, 4.6, 5.3, 4.4, 1.9, 2.6, 1.2, 0.0, 0.0, 0.0],
+                                    label:{
+                                        show:true,
+                                        position: 'right'
+                                    }
+                                    }
+                                ]
+                                });
+                            });
+                            </script>
+                        
+          
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="col-lg-6" style="max-height: 80%;">
+    
+    
+                        <div class="card">
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                    <h6>Período</h6>
+                                    </li>
+    
+                                    <li><a class="dropdown-item" href="#">Agosto / 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Julho / 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Junho / 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Maio / 2023</a></li>
+                                    <li><a class="dropdown-item" href="#">Abril / 2023</a></li>
+                                </ul>
+                            </div>
+    
+                            <div class="card-body">
+                                <h5 class="card-title">Fluxo Competência<span>| Agosto/2023</span></h5>
+    
+                                <div id="trafficChart" style="height: 250px;" class="echart"></div>
+    
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", () => {
+                                    echarts.init(document.querySelector("#trafficChart")).setOption({
+                                        tooltip: {
+                                        trigger: 'item'
+                                        },
+                                        legend: {
+                                            top: '5%', // Define a posição vertical da legenda
+                                            left: '5%', // Define a posição horizontal da legenda
+                                            orient: 'vertical', // Define a orientação da legenda
+                                            data: ['Danos Parciais', 'Indenização', 'Produtos Adicionais'], // Define os nomes da legenda
+                                            textStyle: {
+                                                color: 'black' // Define a cor do texto da legenda
+                                            }
+                                        },
+                                        series: [{
+                                        name: 'Fluxo Competência (%)',
+                                        type: 'pie',
+                                        radius: ['0%', '60%'],
+                                        avoidLabelOverlap: false,
+                                        label: {
+                                            show: true,
+                                            position: 'outside',
+                                            formatter: '{d}%'
+                                        },
+                                        emphasis: {
+                                            label: {
+                                            show: true,
+                                            fontSize: '18',
+                                            fontWeight: 'bold'
+                                            }
+                                        },
+                                        labelLine: {
+                                            show: false
+                                        },
+                                        data: [{
+                                            value: 40.16,
+                                            name: 'Danos Parciais'
+                                            },
+                                            {
+                                            value: 74.08,
+                                            name: 'Indenização'
+                                            },
+                                            {
+                                            value: 3.96,
+                                            name: 'Produtos Adicionais'
+                                            }
+                                        ]
+                                        }]
+                                    });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                   
+    
+                    
+    
+                        <div class="card">
+                            <div class="filter">
+                            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                <li class="dropdown-header text-start">
+                                <h6>Período</h6>
+                                </li>
+            
+                                <li><a class="dropdown-item" href="#">Agosto / 2023</a></li>
+                                <li><a class="dropdown-item" href="#">Julho / 2023</a></li>
+                                <li><a class="dropdown-item" href="#">Junho / 2023</a></li>
+                                <li><a class="dropdown-item" href="#">Maio / 2023</a></li>
+                                <li><a class="dropdown-item" href="#">Abril / 2023</a></li>
+                            </ul>
+                            </div>
+            
+                            <div class="card-body pb-0">
+                            <h5 class="card-title">Fluxo Caixa<span>| Agosto/2023</span></h5>
+            
+                            <div id="testeChart" style="height: 250px;" class="echart"></div>
+            
+                            <script>
+                                document.addEventListener("DOMContentLoaded", () => {
+                                echarts.init(document.querySelector("#testeChart")).setOption({
+                                    tooltip: {
+                                    trigger: 'item'
+                                    },
+                                    legend: {
+                                        top: '5%', // Define a posição vertical da legenda
+                                        left: '5%', // Define a posição horizontal da legenda
+                                        orient: 'vertical', // Define a orientação da legenda
+                                        data: ['Danos Parciais', 'Indenização', 'Produtos Adicionais'], // Define os nomes da legenda
+                                        textStyle: {
+                                            color: 'black' // Define a cor do texto da legenda
+                                        }
+                                    },
+                                    series: [{
+                                    name: 'Fluxo Caixa (%)',
+                                    type: 'pie',
+                                    radius: ['0%', '60%'],
+                                    avoidLabelOverlap: false,
+                                    label: {
+                                        show: true,
+                                        position: 'outside',
+                                        formatter: '{d}%'
+                                    },
+                                    emphasis: {
+                                        label: {
+                                        show: true,
+                                        fontSize: '18',
+                                        fontWeight: 'bold'
+                                        }
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    data: [{
+                                        value: 47.55,
+                                        name: 'Danos Parciais'
+                                        },
+                                        {
+                                        value: 57.11,
+                                        name: 'Indenização'
+                                        },
+                                        {
+                                        value: 4.41,
+                                        name: 'Produtos Adicionais'
+                                        }
+                                    ]
+                                    }]
+                                });
+                                });
+                            </script>
+            
+                            </div>
+                    
+    
+    
+    
+                </div> 
+
+
+            </div>
+
+
+        </section>
+
+    </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Template 1</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="#">Vision Analytics</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
